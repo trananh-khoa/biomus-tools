@@ -1,19 +1,28 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && bun simple-git-hooks",
-    "lint:commit": "commitlint --edit"
+    "lint:commit": "commitlint --edit",
+    "lint:nuxt": "eslint ."
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.5.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^1.1.2",
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
     "@nuxt/devtools": "latest",
+    "@unocss/eslint-config": "^0.57.4",
+    "@unocss/nuxt": "^0.57.4",
+    "eslint": "^8.53.0",
+    "lint-staged": "^15.1.0",
     "nuxt": "^3.8.1",
     "simple-git-hooks": "^2.9.0",
     "vue": "^3.3.8",
@@ -25,9 +34,10 @@
     ]
   },
   "simple-git-hooks": {
+    "pre-commit": "bun lint-staged",
     "commit-msg": "bun run lint:commit ${1}"
   },
-  "dependencies": {
-    "@tauri-apps/api": "^1.5.1"
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

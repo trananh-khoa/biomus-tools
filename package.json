@@ -7,12 +7,24 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare && bun simple-git-hooks",
+    "lint:commit": "commitlint --edit"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.1",
+    "@commitlint/config-conventional": "^18.4.0",
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.1",
+    "simple-git-hooks": "^2.9.0",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "bun run lint:commit ${1}"
   }
 }

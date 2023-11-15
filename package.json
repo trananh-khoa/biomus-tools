@@ -26,5 +26,8 @@
   },
   "simple-git-hooks": {
     "commit-msg": "bun run lint:commit ${1}"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.5.1"
   }
 }

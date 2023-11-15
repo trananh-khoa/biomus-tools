@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && bun simple-git-hooks",
     "lint:commit": "commitlint --edit",
-    "lint:nuxt": "eslint ."
+    "lint:nuxt": "eslint .",
+    "lint:rust": "cargo fmt --manifest-path src-tauri/Cargo.toml && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.1"
@@ -34,8 +35,8 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "bun lint-staged",
-    "commit-msg": "bun run lint:commit ${1}"
+    "pre-commit": "bun lint-staged && bun lint:rust",
+    "commit-msg": "bun lint:commit ${1}"
   },
   "lint-staged": {
     "*": "eslint --fix"

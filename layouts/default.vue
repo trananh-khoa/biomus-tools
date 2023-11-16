@@ -17,8 +17,9 @@
 html, body, #__nuxt {
   @apply m-0 h-full;
 }
-/* Default font is small */
+/* Background is transparent */
+/* Default text is tight and white */
 body {
-  @apply font-sans tracking-tight
+  @apply bg-slate-950/60 font-sans text-white tracking-tight
 }
 </style>

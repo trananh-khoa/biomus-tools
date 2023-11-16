@@ -60,8 +60,10 @@
         "minWidth": 400,
         "resizable": true,
         "title": "biomus-tools",
+        "transparent": true,
         "width": 800
       }
-    ]
+    ],
+    "macOSPrivateApi": true
   }
 }

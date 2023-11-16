@@ -13,7 +13,8 @@
     "lint:rust": "cargo fmt --manifest-path src-tauri/Cargo.toml && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
   },
   "dependencies": {
-    "@tauri-apps/api": "^1.5.1"
+    "@tauri-apps/api": "^1.5.1",
+    "radix-vue": "^1.1.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^1.1.2",

@@ -8,9 +8,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && bun simple-git-hooks",
+    "format:rust": "cargo fmt --manifest-path src-tauri/Cargo.toml",
     "lint:commit": "commitlint --edit",
-    "lint:nuxt": "eslint .",
-    "lint:rust": "cargo fmt --manifest-path src-tauri/Cargo.toml && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
+    "lint:nuxt": "eslint --fix",
+    "lint:rust": "bun format:rust && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
   },
   "dependencies": {
     "@tauri-apps/api": "^1.5.1",

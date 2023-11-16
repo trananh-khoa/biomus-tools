@@ -3,11 +3,14 @@
 </script>
 
 <template>
-  <main>
-    <slot />
-  </main>
+  <LayoutMainContent>
+    hello world!
+  </LayoutMainContent>
 </template>
 
-<style>
-
+<style lang="postcss">
+/* Layout should be full screen */
+html, body, #__nuxt {
+  @apply m-0 h-full;
+}
 </style>

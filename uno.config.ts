@@ -11,7 +11,10 @@ import {
 export default defineConfig({
   presets: [
     presetUno(),
-    presetAttributify(),
+    presetAttributify({
+      prefix: 'un-',
+      prefixedOnly: true,
+    }),
     presetIcons({}),
     presetWebFonts({
       fonts: {

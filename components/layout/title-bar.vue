@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div un-bg-red-100>
-    Hello World!
+  <div un-bg="red-400">
+    Title Bar
   </div>
 </template>
 

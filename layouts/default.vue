@@ -3,9 +3,14 @@
 </script>
 
 <template>
-  <LayoutMainContent>
-    hello world!
-  </LayoutMainContent>
+  <!-- Layout should always be full screen -->
+  <div un-flex="~ col" un-h-full>
+    <LayoutTitleBar />
+    <LayoutMainContent un-flex-grow>
+      <slot />
+    </LayoutMainContent>
+    <LayoutStatusBar />
+  </div>
 </template>
 
 <style lang="postcss">

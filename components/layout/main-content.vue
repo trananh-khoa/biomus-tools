@@ -5,34 +5,34 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
 <template>
   <!-- https://www.radix-vue.com/components/scroll-area.html -->
   <!-- Main (and scroll area root + viewport) content should fill all available space -->
-  <main un-h="full">
-    <ScrollAreaRoot un-h="full">
-      <!-- Content (horizontal padding to avoid vertical scrollbar) -->
-      <ScrollAreaViewport un-h="full" un-p="x-6">
-        <slot />
-      </ScrollAreaViewport>
-      <!-- Horizontal scroll -->
-      <ScrollAreaScrollbar
-        orientation="horizontal"
-        un-select="none"
-        un-touch="none"
-      >
-        <ScrollAreaThumb />
-      </ScrollAreaScrollbar>
-      <!-- Vertical scroll -->
-      <ScrollAreaScrollbar
-        orientation="vertical"
-        un-bg="black/10 hover:black/20"
-        un-p="x-0.75 y-1"
-        un-select="none"
-        un-touch="none"
-        un-transition="colors duration-200 ease-out"
-        un-w="1.5"
-      >
-        <ScrollAreaThumb un-bg="gray-600" un-rounded="full" />
-      </ScrollAreaScrollbar>
-      <!-- Scroll corner -->
-      <ScrollAreaCorner />
-    </ScrollAreaRoot>
-  </main>
+  <!-- Flex takes care of this -->
+  <ScrollAreaRoot un-overflow-hidden>
+    <!-- Content (horizontal padding to avoid vertical scrollbar) -->
+    <!-- Need to set h-full manually -->
+    <ScrollAreaViewport un-h-full un-px-6>
+      <slot />
+    </ScrollAreaViewport>
+    <!-- Horizontal scroll -->
+    <ScrollAreaScrollbar
+      orientation="horizontal"
+      un-select-none
+      un-touch-none
+    >
+      <ScrollAreaThumb />
+    </ScrollAreaScrollbar>
+    <!-- Vertical scroll -->
+    <ScrollAreaScrollbar
+      orientation="vertical"
+      un-bg="black/10 hover:black/20"
+      un-p="x-0.75 y-1"
+      un-select-none
+      un-touch-none
+      un-transition="colors duration-200"
+      un-w="1.5"
+    >
+      <ScrollAreaThumb un-bg-gray-600 un-rounded-full />
+    </ScrollAreaScrollbar>
+    <!-- Scroll corner -->
+    <ScrollAreaCorner />
+  </ScrollAreaRoot>
 </template>

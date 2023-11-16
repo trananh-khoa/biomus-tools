@@ -15,7 +15,7 @@ export default defineConfig({
       prefix: 'un-',
       prefixedOnly: true,
     }),
-    presetIcons({}),
+    presetIcons({ scale: 1.2 }),
     presetWebFonts({
       fonts: {
         sans: 'Inter:400,700',

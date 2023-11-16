@@ -1,11 +1,25 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import {
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuRoot,
 } from 'radix-vue'
+
+const sections = [
+  {
+    category: 'General',
+    items: [
+      { icon: 'i-ph-house', label: 'Home', to: '/' },
+    ],
+  },
+  {
+    category: 'ART.LAB',
+    items: [
+      { icon: 'i-ph-arrows-clockwise', label: 'File Converter', to: '/artlab/converter' },
+    ],
+  },
+]
 </script>
 
 <template>
@@ -14,28 +28,27 @@ import {
     <!-- Navigation -->
     <NavigationMenuRoot orientation="vertical">
       <NavigationMenuList un-list-none un-p-0>
-        <NavigationMenuItem>
-          <NavigationMenuLink as-child>
-            <NuxtLink to="/">
-              Home
-            </NuxtLink>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink as-child>
-            <NuxtLink to="/artlab/converter">
-              Converter
-            </NuxtLink>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuIndicator />
+        <div v-for="{ category, items } in sections" :key="category" un-mb-4>
+          <div un-mb-1 un-ml-2 un-text="xs neutral-500">
+            {{ category }}
+          </div>
+          <NavigationMenuItem v-for="{ icon, label, to } in items" :key="to" un-flex>
+            <NavigationMenuLink as-child un-bg="hover:neutral-700" un-px-2 un-py-1 un-rounded-md un-transition="colors" un-w-full>
+              <NuxtLink :to="to" un-flex un-decoration-none un-gap-2 un-items-center un-select-none un-text="sm white">
+                <div :class="icon" />
+                {{ label }}
+              </NuxtLink>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </div>
       </NavigationMenuList>
     </NavigationMenuRoot>
   </UiScrollArea>
 </template>
 
 <style lang="postcss" scoped>
-.category {
-  @apply font-700 text-neutral-500 text-xs tracking-wide;
+/* Style active link */
+a.router-link-active {
+  @apply bg-blue-800
 }
 </style>

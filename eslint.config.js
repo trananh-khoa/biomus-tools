@@ -8,7 +8,7 @@ export default antfu(
     rules: {
       'perfectionist/sort-array-includes': 'error',
       'perfectionist/sort-objects': 'error',
-      'perfectionist/sort-vue-attributes': 'error',
+      // 'perfectionist/sort-vue-attributes': 'error',
     },
   },
 )

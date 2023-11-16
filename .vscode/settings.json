@@ -26,7 +26,8 @@
     { "rule": "*-dangle", "severity": "off" },
     { "rule": "*-newline", "severity": "off" },
     { "rule": "*quotes", "severity": "off" },
-    { "rule": "*semi", "severity": "off" }
+    { "rule": "*semi", "severity": "off" },
+    { "rule": "perfectionist/sort-vue-attributes", "severity": "off" }
   ],
 
   // The following is optional.

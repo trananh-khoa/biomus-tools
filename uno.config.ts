@@ -18,9 +18,7 @@ export default defineConfig({
     presetIcons({}),
     presetWebFonts({
       fonts: {
-        mono: 'DM Mono',
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
+        sans: 'Inter:400,700',
       },
     }),
   ],

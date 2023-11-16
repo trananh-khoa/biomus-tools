@@ -5,4 +5,5 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'radix-vue/nuxt',
   ],
+  ssr: false,
 })

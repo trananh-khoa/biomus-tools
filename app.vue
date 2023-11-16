@@ -13,6 +13,6 @@ html, body, #__nuxt {
 /* Background is transparent */
 /* Default text is tight and white */
 body {
-  @apply bg-neutral-800/80 font-sans text-white
+  @apply bg-neutral-800/80 font-sans text-sm text-white
 }
 </style>

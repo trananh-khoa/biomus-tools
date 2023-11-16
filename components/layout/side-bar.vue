@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div un-border="~ b-0 l-0 r-1 t-1 black solid" un-p-2 un-w-32>
+  <UiScrollArea un-border="~ b-0 l-0 r-1 t-1 black solid" un-w-48>
     Navigation
-  </div>
+  </UiScrollArea>
 </template>
 
 <style>

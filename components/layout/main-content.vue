@@ -6,7 +6,7 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
   <!-- https://www.radix-vue.com/components/scroll-area.html -->
   <!-- Main (and scroll area root + viewport) content should fill all available space -->
   <!-- Flex takes care of this -->
-  <ScrollAreaRoot un-overflow-hidden>
+  <ScrollAreaRoot un-bg-neutral-900 un-border="~ b-0 l-0 t-1 r-0 black solid" un-overflow-hidden>
     <!-- Content (horizontal padding to avoid vertical scrollbar) -->
     <!-- Need to set h-full manually -->
     <ScrollAreaViewport un-h-full un-px-6>
@@ -30,7 +30,7 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
       un-transition="colors duration-200"
       un-w="1.5"
     >
-      <ScrollAreaThumb un-bg-slate-600 un-rounded-full />
+      <ScrollAreaThumb un-bg-neutral-600 un-rounded-full />
     </ScrollAreaScrollbar>
     <!-- Scroll corner -->
     <ScrollAreaCorner />

@@ -9,7 +9,7 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
     <!-- Need to set h-full manually -->
     <ScrollAreaViewport un-h-full>
       <!-- Padding must be done inside viewport -->
-      <div un-px-6 un-py-4>
+      <div un-p4>
         <slot />
       </div>
     </ScrollAreaViewport>

@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    Hello World!!
+    <h1>Biomedical Ultrasound Tools</h1>
   </div>
 </template>
 

@@ -5,7 +5,7 @@
 <template>
   <!-- Layout should always be full screen -->
   <div un-flex="~ col" un-h-full>
-    <div un-flex un-flex-grow un-overflow-hidden>
+    <div un-flex un-overflow-hidden un-flex-grow>
       <LayoutSideBar />
       <LayoutMainContent un-flex-grow>
         <slot />

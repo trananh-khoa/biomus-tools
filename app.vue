@@ -1,3 +1,8 @@
+<script lang="ts" setup>
+// https://unocss.dev/guide/style-reset
+import '@unocss/reset/tailwind.css'
+</script>
+
 <template>
   <!-- https://nuxt.com/docs/guide/directory-structure/layouts -->
   <NuxtLayout>

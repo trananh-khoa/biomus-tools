@@ -11,7 +11,18 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false
+      "all": false,
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      }
     },
     "bundle": {
       "active": true,
@@ -54,8 +65,10 @@
     },
     "windows": [
       {
-        "fullscreen": false,
         "height": 600,
+        "fullscreen": false,
+        "minHeight": 300,
+        "minWidth": 400,
         "resizable": true,
         "title": "biomus-tools",
         "width": 800

@@ -30,7 +30,7 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
       un-transition="colors duration-200"
       un-w="1.5"
     >
-      <ScrollAreaThumb un-bg-gray-600 un-rounded-full />
+      <ScrollAreaThumb un-bg-slate-600 un-rounded-full />
     </ScrollAreaScrollbar>
     <!-- Scroll corner -->
     <ScrollAreaCorner />

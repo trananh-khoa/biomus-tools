@@ -21,6 +21,7 @@
     "@antfu/eslint-config": "^1.1.2",
     "@commitlint/cli": "^18.4.1",
     "@commitlint/config-conventional": "^18.4.0",
+    "@iconify-json/ph": "^1.1.6",
     "@nuxt/devtools": "latest",
     "@unocss/eslint-config": "^0.57.4",
     "@unocss/nuxt": "^0.57.4",

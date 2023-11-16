@@ -5,7 +5,6 @@
 <template>
   <!-- Layout should always be full screen -->
   <div un-flex="~ col" un-h-full>
-    <LayoutTitleBar />
     <LayoutMainContent un-flex-grow>
       <slot />
     </LayoutMainContent>
@@ -17,5 +16,9 @@
 /* Layout should be full screen */
 html, body, #__nuxt {
   @apply m-0 h-full;
+}
+/* Default font is small */
+body {
+  @apply font-sans tracking-tight
 }
 </style>

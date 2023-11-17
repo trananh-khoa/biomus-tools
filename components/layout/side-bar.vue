@@ -49,6 +49,6 @@ const sections = [
 <style lang="postcss" scoped>
 /* Style active link */
 a.router-link-active {
-  background-color: var(--colour-bg);
+  background-color: var(--bg-colour);
 }
 </style>

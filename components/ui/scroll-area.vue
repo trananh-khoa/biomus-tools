@@ -9,7 +9,7 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
     <!-- Need to set h-full manually -->
     <ScrollAreaViewport un-h-full>
       <!-- Padding must be done inside viewport -->
-      <div un-p4>
+      <div un-py-4 un-px-4>
         <slot />
       </div>
     </ScrollAreaViewport>
@@ -24,12 +24,13 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
     <!-- Vertical scroll -->
     <ScrollAreaScrollbar
       orientation="vertical"
-      un-p="x-0.75 y-1"
+      un-p="x-0.5 y-1"
       un-select-none
       un-touch-none
-      un-w="1.5"
+      un-bg="black/50"
+      un-w="2.5"
     >
-      <ScrollAreaThumb un-bg="neutral-500/25" un-rounded-full />
+      <ScrollAreaThumb class="bg-rainbow" un-rounded-full />
     </ScrollAreaScrollbar>
     <!-- Scroll corner -->
     <ScrollAreaCorner />

@@ -6,6 +6,7 @@ import {
   NavigationMenuRoot,
 } from 'radix-vue'
 
+// Manually specify links to pages
 const sections = [
   {
     category: 'General',
@@ -14,9 +15,9 @@ const sections = [
     ],
   },
   {
-    category: 'ART.LAB',
+    category: 'Tools',
     items: [
-      { icon: 'i-ph-arrows-clockwise', label: 'File Converter', to: '/artlab/converter' },
+      { icon: 'i-ph-arrows-clockwise', label: 'File Converter', to: '/tools/file-converter' },
     ],
   },
 ]
@@ -24,7 +25,7 @@ const sections = [
 
 <template>
   <!-- Scroll area -->
-  <UiScrollArea un-border="~ b-0 l-0 r-1 t-1 black solid" un-min-w-48>
+  <UiScrollArea un-border="~ b-0 l-0 r-1 t-1 black solid" un-min-w-48 as="div">
     <!-- Navigation -->
     <NavigationMenuRoot orientation="vertical">
       <NavigationMenuList un-list-none>

@@ -1,0 +1,108 @@
+@keyframes rainbow {
+    0% { --colour-text: #00a98e; --colour-bg: #008269; --colour-text-next: #009ff7; }
+    1.25% { --colour-text: #00a996; --colour-bg: #008371; --colour-text-next: #009dfa; }
+    2.5% { --colour-text: #00a99f; --colour-bg: #00837a; --colour-text-next: #009bfc; }
+    3.75% { --colour-text: #00a9a7; --colour-bg: #008382; --colour-text-next: #0098fd; }
+    5% { --colour-text: #00a9b0; --colour-bg: #00838a; --colour-text-next: #0096fd; }
+    6.25% { --colour-text: #00a9b8; --colour-bg: #008391; --colour-text-next: #0093fd; }
+    7.5% { --colour-text: #00a9c0; --colour-bg: #008399; --colour-text-next: #2e90fc; }
+    8.75% { --colour-text: #00a8c7; --colour-bg: #0082a0; --colour-text-next: #4d8dfa; }
+    10% { --colour-text: #00a8cf; --colour-bg: #0082a7; --colour-text-next: #638af8; }
+    11.25% { --colour-text: #00a7d5; --colour-bg: #0081ae; --colour-text-next: #7587f5; }
+    12.5% { --colour-text: #00a6dc; --colour-bg: #0081b4; --colour-text-next: #8583f1; }
+    13.75% { --colour-text: #00a6e2; --colour-bg: #0080b9; --colour-text-next: #9280ed; }
+    15% { --colour-text: #00a4e7; --colour-bg: #007fbf; --colour-text-next: #9f7ce9; }
+    16.25% { --colour-text: #00a3ec; --colour-bg: #007ec3; --colour-text-next: #aa78e3; }
+    17.5% { --colour-text: #00a2f1; --colour-bg: #007dc8; --colour-text-next: #b574dd; }
+    18.75% { --colour-text: #00a0f4; --colour-bg: #007bcb; --colour-text-next: #be71d7; }
+    20% { --colour-text: #009ff7; --colour-bg: #007ace; --colour-text-next: #c76dd1; }
+    21.25% { --colour-text: #009dfa; --colour-bg: #0078d0; --colour-text-next: #cf69c9; }
+    22.5% { --colour-text: #009bfc; --colour-bg: #0076d2; --colour-text-next: #d566c2; }
+    23.75% { --colour-text: #0098fd; --colour-bg: #0074d3; --colour-text-next: #dc63ba; }
+    25% { --colour-text: #0096fd; --colour-bg: #0071d4; --colour-text-next: #e160b3; }
+    26.25% { --colour-text: #0093fd; --colour-bg: #006fd3; --colour-text-next: #e65eab; }
+    27.5% { --colour-text: #2e90fc; --colour-bg: #006cd2; --colour-text-next: #e95ca2; }
+    28.75% { --colour-text: #4d8dfa; --colour-bg: #0069d1; --colour-text-next: #ed5a9a; }
+    30% { --colour-text: #638af8; --colour-bg: #3066cf; --colour-text-next: #ef5992; }
+    31.25% { --colour-text: #7587f5; --colour-bg: #4963cc; --colour-text-next: #f15989; }
+    32.5% { --colour-text: #8583f1; --colour-bg: #5b5fc8; --colour-text-next: #f25981; }
+    33.75% { --colour-text: #9280ed; --colour-bg: #6a5cc4; --colour-text-next: #f25a79; }
+    35% { --colour-text: #9f7ce9; --colour-bg: #7758c0; --colour-text-next: #f25c71; }
+    36.25% { --colour-text: #aa78e3; --colour-bg: #8354bb; --colour-text-next: #f15e69; }
+    37.5% { --colour-text: #b574dd; --colour-bg: #8d50b5; --colour-text-next: #ef6061; }
+    38.75% { --colour-text: #be71d7; --colour-bg: #964baf; --colour-text-next: #ed635a; }
+    40% { --colour-text: #c76dd1; --colour-bg: #9e47a9; --colour-text-next: #eb6552; }
+    41.25% { --colour-text: #cf69c9; --colour-bg: #a643a2; --colour-text-next: #e8694b; }
+    42.5% { --colour-text: #d566c2; --colour-bg: #ac3f9b; --colour-text-next: #e46c44; }
+    43.75% { --colour-text: #dc63ba; --colour-bg: #b23b94; --colour-text-next: #e06f3d; }
+    45% { --colour-text: #e160b3; --colour-bg: #b7378c; --colour-text-next: #db7336; }
+    46.25% { --colour-text: #e65eab; --colour-bg: #bb3485; --colour-text-next: #d77630; }
+    47.5% { --colour-text: #e95ca2; --colour-bg: #be317d; --colour-text-next: #d17a2a; }
+    48.75% { --colour-text: #ed5a9a; --colour-bg: #c12f75; --colour-text-next: #cc7d24; }
+    50% { --colour-text: #ef5992; --colour-bg: #c32d6d; --colour-text-next: #c6811e; }
+    51.25% { --colour-text: #f15989; --colour-bg: #c52d65; --colour-text-next: #bf8418; }
+    52.5% { --colour-text: #f25981; --colour-bg: #c52e5e; --colour-text-next: #b98713; }
+    53.75% { --colour-text: #f25a79; --colour-bg: #c62f56; --colour-text-next: #b28a0f; }
+    55% { --colour-text: #f25c71; --colour-bg: #c5314e; --colour-text-next: #ab8d0c; }
+    56.25% { --colour-text: #f15e69; --colour-bg: #c43447; --colour-text-next: #a3900b; }
+    57.5% { --colour-text: #ef6061; --colour-bg: #c3373f; --colour-text-next: #9c920d; }
+    58.75% { --colour-text: #ed635a; --colour-bg: #c13b38; --colour-text-next: #949510; }
+    60% { --colour-text: #eb6552; --colour-bg: #be3e31; --colour-text-next: #8b9715; }
+    61.25% { --colour-text: #e8694b; --colour-bg: #bb4229; --colour-text-next: #83991b; }
+    62.5% { --colour-text: #e46c44; --colour-bg: #b74622; --colour-text-next: #7a9b21; }
+    63.75% { --colour-text: #e06f3d; --colour-bg: #b44a1a; --colour-text-next: #719d27; }
+    65% { --colour-text: #db7336; --colour-bg: #af4e11; --colour-text-next: #679e2e; }
+    66.25% { --colour-text: #d77630; --colour-bg: #ab5206; --colour-text-next: #5da035; }
+    67.5% { --colour-text: #d17a2a; --colour-bg: #a55600; --colour-text-next: #51a13c; }
+    68.75% { --colour-text: #cc7d24; --colour-bg: #a05900; --colour-text-next: #44a244; }
+    70% { --colour-text: #c6811e; --colour-bg: #9b5d00; --colour-text-next: #34a44b; }
+    71.25% { --colour-text: #bf8418; --colour-bg: #956000; --colour-text-next: #1ba553; }
+    72.5% { --colour-text: #b98713; --colour-bg: #8e6300; --colour-text-next: #00a65b; }
+    73.75% { --colour-text: #b28a0f; --colour-bg: #886600; --colour-text-next: #00a663; }
+    75% { --colour-text: #ab8d0c; --colour-bg: #816900; --colour-text-next: #00a76c; }
+    76.25% { --colour-text: #a3900b; --colour-bg: #7a6b00; --colour-text-next: #00a874; }
+    77.5% { --colour-text: #9c920d; --colour-bg: #736e00; --colour-text-next: #00a87d; }
+    78.75% { --colour-text: #949510; --colour-bg: #6c7000; --colour-text-next: #00a985; }
+    80% { --colour-text: #8b9715; --colour-bg: #647200; --colour-text-next: #00a98e; }
+    81.25% { --colour-text: #83991b; --colour-bg: #5c7400; --colour-text-next: #00a996; }
+    82.5% { --colour-text: #7a9b21; --colour-bg: #537600; --colour-text-next: #00a99f; }
+    83.75% { --colour-text: #719d27; --colour-bg: #4a7700; --colour-text-next: #00a9a7; }
+    85% { --colour-text: #679e2e; --colour-bg: #407900; --colour-text-next: #00a9b0; }
+    86.25% { --colour-text: #5da035; --colour-bg: #357a0a; --colour-text-next: #00a9b8; }
+    87.5% { --colour-text: #51a13c; --colour-bg: #277b16; --colour-text-next: #00a9c0; }
+    88.75% { --colour-text: #44a244; --colour-bg: #117c1f; --colour-text-next: #00a8c7; }
+    90% { --colour-text: #34a44b; --colour-bg: #007d28; --colour-text-next: #00a8cf; }
+    91.25% { --colour-text: #1ba553; --colour-bg: #007e30; --colour-text-next: #00a7d5; }
+    92.5% { --colour-text: #00a65b; --colour-bg: #007f38; --colour-text-next: #00a6dc; }
+    93.75% { --colour-text: #00a663; --colour-bg: #008040; --colour-text-next: #00a6e2; }
+    95% { --colour-text: #00a76c; --colour-bg: #008049; --colour-text-next: #00a4e7; }
+    96.25% { --colour-text: #00a874; --colour-bg: #008151; --colour-text-next: #00a3ec; }
+    97.5% { --colour-text: #00a87d; --colour-bg: #008159; --colour-text-next: #00a2f1; }
+    98.75% { --colour-text: #00a985; --colour-bg: #008261; --colour-text-next: #00a0f4; }
+    100% { --colour-text: #00a98e; --colour-bg: #008269; --colour-text-next: #009ff7; }
+}
+
+:root {
+  --colour-text: #00a98e; --colour-bg: #008269; --colour-text-next: #009ff7;
+  --colour-gradient: -webkit-linear-gradient(
+    120deg,
+    var(--colour-text-next) 5%,
+    var(--colour-text)
+  );
+  animation: rainbow 40s linear infinite;
+}
+
+.bg-rainbow {
+    background-color: var(--colour-bg);
+}
+.bg-rainbow-gradient {
+    background: var(--colour-gradient)
+}
+.text-rainbow {
+    color: var(--colour-text);
+}
+.text-rainbow-gradient {
+    background: var(--colour-gradient);
+    background-clip: text;
+    color: transparent;
+}

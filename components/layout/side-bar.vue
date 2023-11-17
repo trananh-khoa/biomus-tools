@@ -24,7 +24,7 @@ const sections = [
 
 <template>
   <!-- Scroll area -->
-  <UiScrollArea un-border="~ b-0 l-0 r-1 t-1 black solid" un-w-48>
+  <UiScrollArea un-border="~ b-0 l-0 r-1 t-1 black solid" un-min-w-48>
     <!-- Navigation -->
     <NavigationMenuRoot orientation="vertical">
       <NavigationMenuList un-list-none>
@@ -49,6 +49,6 @@ const sections = [
 <style lang="postcss" scoped>
 /* Style active link */
 a.router-link-active {
-  @apply bg-blue-800
+  background-color: var(--colour-bg);
 }
 </style>

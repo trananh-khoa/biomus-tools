@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 // https://unocss.dev/guide/style-reset
 import '@unocss/reset/tailwind.css'
+import '~/assets/rainbow.css'
 </script>
 
 <template>

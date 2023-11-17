@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    ARTLAB CONVERTER
+    Image Extraction
   </div>
 </template>
 

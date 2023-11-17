@@ -6,7 +6,7 @@ const features = [
     title: 'Cross Platform',
   },
   {
-    description: 'Built with the powerful and efficient Rust programming language.',
+    description: 'Powered by the performant and efficient Rust programming language.',
     icon: 'i-ph-rocket-launch',
     title: 'Fast and Reliable',
   },
@@ -19,13 +19,13 @@ const features = [
 </script>
 
 <template>
-  <div un-text-center un-mt-4 un-px-4>
+  <div un-pt-4 un-px-2>
     <!-- Title -->
-    <h1 class="text-rainbow-gradient" un-text="3xl" un-mb-4 un-font-700 un-hue-rotate>
+    <h1 class="text-rainbow-gradient" un-font-700 un-mb-4 un-text="3xl">
       Biomedical Ultrasound Tools
     </h1>
     <!-- Description -->
-    <p un-text-neutral-400 un-mb-16>
+    <p un-mb-8 un-text-neutral-400>
       BiomUS-Tools is a collection of useful programs built for the <span un-font-700>Biomedical Ultrasound Laboratory</span>
       at <span un-font-700>Carleton University</span>.
     </p>
@@ -34,11 +34,11 @@ const features = [
       <div
         v-for="{ description, icon, title } in features"
         :key="title"
-        un-rounded-xl
         un-bg-neutral-800
         un-p-4
+        un-rounded-xl
       >
-        <div un-rounded-md un-p-2 un-bg-neutral-600 un-inline-block un-mb-2>
+        <div un-bg-neutral-600 un-rounded-md un-inline-block un-mb-2 un-p-2>
           <div :class="icon" />
         </div>
         <div un-font-700 un-mb-2>

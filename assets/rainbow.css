@@ -87,8 +87,8 @@
   --text-colour: #00a98e; --bg-colour: #008269; --next-colour: #009ff7;
   --colour-gradient: -webkit-linear-gradient(
     120deg,
-    var(--next-colour) 5%,
-    var(--text-colour)
+    var(--next-colour),
+    var(--text-colour) 50%
   );
   animation: rainbow 80s linear infinite;
 }

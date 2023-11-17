@@ -7,11 +7,9 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
   <ScrollAreaRoot un-overflow-hidden>
     <!-- Content (horizontal padding to avoid vertical scrollbar) -->
     <!-- Need to set h-full manually -->
-    <ScrollAreaViewport un-h-full>
+    <ScrollAreaViewport as-child un-h-full un-px-4 un-py-4>
       <!-- Padding must be done inside viewport -->
-      <div un-py-4 un-px-4>
-        <slot />
-      </div>
+      <slot />
     </ScrollAreaViewport>
     <!-- Horizontal scroll -->
     <ScrollAreaScrollbar

@@ -14,12 +14,10 @@ async function handleSelectFiles() {
 </script>
 
 <template>
-  <div un-flex="~ col" un-h-full un-px-2 un-pt-4>
-    <!-- Title -->
-    <h1 class="text-rainbow-gradient" un-mb-8 un-font-700 un-text="3xl">
+  <LayoutPageContent>
+    <template #title>
       File Converter
-    </h1>
-    <!-- File conversion -->
+    </template>
     <div un-grid="~ sm:cols-2 gap-6" un-overflow-hidden un-flex-grow>
       <!-- File list -->
       <div un-flex="~ col" un-overflow-hidden>
@@ -53,7 +51,7 @@ async function handleSelectFiles() {
         </div>
       </div>
     </div>
-  </div>
+  </LayoutPageContent>
 </template>
 
 <style>

@@ -15,6 +15,9 @@
       "dialog": {
         "open": true,
         "save": true
+      },
+      "window": {
+        "startDragging": true
       }
     },
     "bundle": {
@@ -60,10 +63,12 @@
       {
         "height": 600,
         "fullscreen": false,
+        "hiddenTitle": true,
         "minHeight": 450,
         "minWidth": 600,
         "resizable": true,
         "title": "biomus-tools",
+        "titleBarStyle": "Overlay",
         "transparent": true,
         "width": 800
       }

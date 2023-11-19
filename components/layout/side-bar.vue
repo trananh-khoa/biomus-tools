@@ -26,17 +26,20 @@ const sections = [
 
 <template>
   <!-- Scroll area -->
-  <UiScrollArea un-border="~ b-0 l-0 r-1 t-1 black solid" un-min-w-48 as="div">
+  <UiScrollArea un-min-w-56 as="div" un-bg="black/10">
     <!-- Navigation -->
-    <NavigationMenuRoot orientation="vertical">
+    <NavigationMenuRoot orientation="vertical" un-px-6>
       <NavigationMenuList un-list-none un-mt-4>
-        <div v-for="{ category, items } in sections" :key="category" un-mb-8 un-flex="~ col gap-1">
+        <div v-for="{ category, items } in sections" :key="category" un-mb-4 un-flex="~ col gap-1">
           <div un-mb-1 un-ml-2 un-text="xs neutral-400">
             {{ category }}
           </div>
           <NavigationMenuItem v-for="{ icon, label, to } in items" :key="to">
-            <NavigationMenuLink un-bg="hover:neutral-700" un-transition="colors" un-rounded-md un-px-2 un-py-1 as-child un-w-full>
-              <NuxtLink :to="to" un-flex un-select-none un-decoration-none un-gap-2 un-items-center un-text="sm white">
+            <NavigationMenuLink
+              un-bg="hover:zinc-700" un-border="1 solid transparent hover:[--text-colour]"
+              un-transition="colors" as-child un-rounded-md un-px-2 un-py-1 un-w-full
+            >
+              <NuxtLink :to="to" un-flex un-select-none un-gap-2 un-items-center un-text-sm un-font="hover:700">
                 <div :class="icon" />
                 {{ label }}
               </NuxtLink>
@@ -52,6 +55,7 @@ const sections = [
 /* Style active link */
 a.router-link-active {
   background-color: var(--bg-colour);
+  border-color: var(--text-colour);
   font-weight: 700;
 }
 </style>

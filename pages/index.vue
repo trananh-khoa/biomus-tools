@@ -19,26 +19,23 @@ const features = [
 </script>
 
 <template>
-  <div un-pt-4 un-px-2>
+  <LayoutPageContent>
     <!-- Title -->
-    <h1 class="text-rainbow-gradient" un-font-700 un-mb-4 un-text="3xl">
+    <template #title>
       Biomedical Ultrasound Tools
-    </h1>
+    </template>
     <!-- Description -->
-    <p un-mb-8 un-text-neutral-400>
+    <template #description>
       BiomUS-Tools is a collection of useful programs built for the <span un-font-700>Biomedical Ultrasound Laboratory</span>
       at <span un-font-700>Carleton University</span>.
-    </p>
+    </template>
     <!-- Features -->
     <div un-grid="~ gap-4 sm:cols-2 md:cols-3" un-text-left>
       <div
-        v-for="{ description, icon, title } in features"
-        :key="title"
-        un-bg-neutral-800
-        un-p-4
-        un-rounded-xl
+        v-for="{ description, icon, title } in features" :key="title"
+        un-rounded-md un-h-full un-bg-zinc-800 un-p-4
       >
-        <div un-bg-neutral-600 un-rounded-md un-inline-block un-mb-2 un-p-2>
+        <div un-rounded-md un-inline-block un-mb-2 un-p-2 un-bg-zinc-600>
           <div :class="icon" />
         </div>
         <div un-font-700 un-mb-2>
@@ -49,5 +46,5 @@ const features = [
         </p>
       </div>
     </div>
-  </div>
+  </LayoutPageContent>
 </template>

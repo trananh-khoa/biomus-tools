@@ -11,7 +11,7 @@ const features = [
     title: 'Fast and Reliable',
   },
   {
-    description: 'Beautifully crafted with Nuxt.js and UnoCSS.',
+    description: 'Built with Nuxt.js and UnoCSS.',
     icon: 'i-ph-paint-brush',
     title: 'Modern UI',
   },
@@ -33,9 +33,9 @@ const features = [
     <div un-grid="~ gap-4 sm:cols-2 md:cols-3" un-text-left>
       <div
         v-for="{ description, icon, title } in features" :key="title"
-        un-rounded-md un-h-full un-bg-zinc-800 un-p-4
+        un-rounded-md un-bg-zinc-800 un-h-full un-p-4
       >
-        <div un-rounded-md un-inline-block un-mb-2 un-p-2 un-bg-zinc-600>
+        <div un-rounded-md un-mb-2 un-inline-block un-p-2 un-bg-zinc-600>
           <div :class="icon" />
         </div>
         <div un-font-700 un-mb-2>

@@ -39,10 +39,10 @@ async function handleSaveLocation() {
           </UIButton>
         </div>
         <!-- File list -->
-        <UiScrollArea v-if="files.length > 0" un-flex-grow un-rounded-md un-bg-zinc-800 un-pr-3 un-pb-3>
+        <UiScrollArea v-if="files.length > 0" un-flex-grow un-rounded-md un-bg-zinc-800 un-pb-3>
           <ul un-text-neutral-400>
             <li v-for="f in files" :key="f">
-              <div un-px-2 un-py-1>
+              <div un-pl-2 un-py-1 un-pr-4>
                 {{ f }}
               </div>
               <Separator un-h-0.25 un-bg-zinc-700 />
@@ -77,7 +77,7 @@ async function handleSaveLocation() {
           </div>
         </div>
         <div>
-          <UIButton un-w-full :class="{ 'bg-rainbow': files.length > 0 }" :disabled="files.length === 0">
+          <UIButton un-w-full :disabled="files.length === 0">
             Convert {{ files.length }} Selected File(s)
           </UIButton>
         </div>

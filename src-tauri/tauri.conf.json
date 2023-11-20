@@ -18,6 +18,9 @@
       },
       "window": {
         "startDragging": true
+      },
+      "path": {
+        "all": true
       }
     },
     "bundle": {

@@ -19,7 +19,7 @@ html, body, #__nuxt {
 /* Background is transparent */
 /* Default text is tight and white */
 body {
-  @apply antialiased bg-gray-800/75 font-sans font-400 text-white;
+  @apply antialiased bg-gray-800/75 font-sans font-400 text-sm text-white;
 }
 /* https://nuxt.com/docs/getting-started/transitions */
 .page-enter-active,

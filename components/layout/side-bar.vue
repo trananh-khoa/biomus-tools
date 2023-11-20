@@ -37,9 +37,9 @@ const sections = [
           <NavigationMenuItem v-for="{ icon, label, to } in items" :key="to">
             <NavigationMenuLink
               un-bg="hover:zinc-700" un-border="1 solid transparent hover:[--text-colour]"
-              un-transition="colors" as-child un-rounded-md un-px-2 un-py-1 un-w-full
+              un-transition="colors" un-rounded-md un-px-2 un-py-1 un-w-full as-child
             >
-              <NuxtLink :to="to" un-flex un-select-none un-gap-2 un-items-center un-text-sm>
+              <NuxtLink :to="to" un-items-center un-flex un-select-none un-gap-2>
                 <div :class="icon" />
                 {{ label }}
               </NuxtLink>

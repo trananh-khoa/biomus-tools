@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { open } from '@tauri-apps/api/dialog'
+import { Separator } from 'radix-vue'
 
 const files: Ref<string[]> = ref([])
-
 async function handleSelectFiles() {
   const selected = await open({
     filters: [{ extensions: ['zrf'], name: 'ART.LAB' }],
@@ -18,38 +18,32 @@ async function handleSelectFiles() {
     <template #title>
       File Converter
     </template>
-    <div un-grid="~ sm:cols-2 gap-6" un-overflow-hidden un-flex-grow>
-      <!-- File list -->
+    <div un-grid="~ sm:cols-2 gap-6" un-flex-grow un-h-0>
+      <!-- File selection -->
       <div un-flex="~ col" un-overflow-hidden>
-        <!-- File selection -->
-        <button un-rounded-md un-bg-neutral-600 un-mb-6 un-p-1 @click="handleSelectFiles">
-          Select File(s)
-        </button>
-        <!-- Chosen files -->
-        <UiScrollArea v-if="files.length > 0" un-flex-grow un-bg-neutral-800 un-rounded-xl>
-          <!-- Show files here -->
-          <div v-for="f in files" :key="f">
-            {{ f }}
-          </div>
+        <!-- Buttons and controls -->
+        <div un-flex="~ gap-2" un-mb-4>
+          <UIButton @click="handleSelectFiles">
+            Select Files
+          </UIButton>
+        </div>
+        <!-- File list -->
+        <UiScrollArea v-if="files.length > 0" un-flex-grow un-text-sm un-rounded-md un-bg-zinc-800 un-pr-3 un-pb-3>
+          <ul un-text-neutral-400>
+            <li v-for="f in files" :key="f" un-pos-relative>
+              <div un-px-2 un-py-1>
+                {{ f }}
+              </div>
+              <Separator un-h-0.25 un-bg-zinc-700 />
+            </li>
+          </ul>
         </UiScrollArea>
-        <div v-else un-flex="~ col gap-2" un-flex-grow un-items-center un-justify-center un-mb-16>
-          <div class="i-ph-warning" />
-          <div>
-            No files selected.
-          </div>
+        <div v-else un-flex="~ col" un-flex-grow un-rounded-md un-bg-zinc-800 un-items-center un-justify-center un-text="sm neutral-400">
+          <div>No files selected</div>
         </div>
       </div>
-      <!-- Options -->
-      <div un-flex="~ col gap-4" un-bg-neutral-800 un-rounded-xl un-p-4>
-        <!-- Output Folder -->
-        <div un-text="sm neutral-400">
-          Output Folder
-        </div>
-        <!-- Signal Settings -->
-        <div un-text="sm neutral-400">
-          Signal Settings
-        </div>
-      </div>
+      <!-- Conversion settings -->
+      <div>Conversion settings</div>
     </div>
   </LayoutPageContent>
 </template>

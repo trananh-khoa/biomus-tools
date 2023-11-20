@@ -39,7 +39,7 @@ const sections = [
               un-bg="hover:zinc-700" un-border="1 solid transparent hover:[--text-colour]"
               un-transition="colors" as-child un-rounded-md un-px-2 un-py-1 un-w-full
             >
-              <NuxtLink :to="to" un-flex un-select-none un-gap-2 un-items-center un-text-sm un-font="hover:700">
+              <NuxtLink :to="to" un-flex un-select-none un-gap-2 un-items-center un-text-sm>
                 <div :class="icon" />
                 {{ label }}
               </NuxtLink>

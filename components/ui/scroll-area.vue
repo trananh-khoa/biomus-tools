@@ -13,15 +13,16 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
     <!-- Horizontal scroll -->
     <ScrollAreaScrollbar
       orientation="horizontal"
-      un-select-none
-      un-touch-none
+      un-bg="black/50"
+      un-h="2.5"
+      un-select-none un-touch-none un-flex un-p-0.5
     >
-      <ScrollAreaThumb />
+      <ScrollAreaThumb class="bg-rainbow" un-rounded-full />
     </ScrollAreaScrollbar>
     <!-- Vertical scroll -->
     <ScrollAreaScrollbar
       orientation="vertical"
-      un-p="x-0.5 y-1"
+      un-p-0.5
       un-select-none
       un-touch-none
       un-bg="black/50"
@@ -30,6 +31,6 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
       <ScrollAreaThumb class="bg-rainbow" un-rounded-full />
     </ScrollAreaScrollbar>
     <!-- Scroll corner -->
-    <ScrollAreaCorner />
+    <ScrollAreaCorner un-h-0.25 un-w-0.25 un-bg="black/50" />
   </ScrollAreaRoot>
 </template>

@@ -10,7 +10,7 @@
     un-bg="zinc-600 hover:zinc-700 disabled:zinc-800 active:zinc-800"
     un-text="sm disabled:neutral-500"
   >
-    <div><slot /></div>
+    <slot />
   </button>
 </template>
 

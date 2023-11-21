@@ -51,7 +51,7 @@ pub struct Output {
 pub struct Parser {}
 
 impl Parser {
-    pub fn parse(target: String) -> Result<Output, Error> {
+    pub fn parse(target: &str) -> Result<Output, Error> {
         // Read raw bytes and initialize offset
         let bytes: Vec<u8> = fs::read(target)?;
         let mut offset: usize = 0;
@@ -118,7 +118,7 @@ impl Parser {
         zsig = Parser::unwrap_matrix(zsig, frame_shift);
         rfsig = Parser::unwrap_matrix(rfsig, frame_shift);
 
-        // // Remove header
+        // Remove header
         zsig.slice_collapse(s![NUM_HEADER_ROWS.., .., ..]);
         rfsig.slice_collapse(s![NUM_HEADER_ROWS.., .., ..]);
 
@@ -215,11 +215,11 @@ impl Parser {
         // Frame shift (and onwards) are moved to front
         // Anything before frame shift is appended at the end
         matrix
-            .slice(s![.., .., -frame_shift..])
-            .assign_to(out.slice_mut(s![.., .., ..frame_shift]));
+            .slice(s![.., .., frame_shift..])
+            .assign_to(out.slice_mut(s![.., .., ..-frame_shift]));
         matrix
-            .slice(s![.., .., ..-frame_shift])
-            .assign_to(out.slice_mut(s![.., .., frame_shift..]));
+            .slice(s![.., .., ..frame_shift])
+            .assign_to(out.slice_mut(s![.., .., -frame_shift..]));
 
         // Promise that result is safe to use
         unsafe { out.assume_init() }

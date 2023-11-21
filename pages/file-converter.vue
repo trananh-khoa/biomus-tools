@@ -2,17 +2,34 @@
 import { open } from '@tauri-apps/api/dialog'
 import { Separator } from 'radix-vue'
 import { downloadDir } from '@tauri-apps/api/path'
+import { invoke } from '@tauri-apps/api/tauri'
 
+// Visual feedback
+const conversionStatus: Ref<string> = ref('WAITING')
+const convertButtonIcon = computed(() => {
+  switch (conversionStatus.value) {
+    case 'READY': return 'i-ph-files'
+    case 'BUSY': return 'i-ph-hourglass text-yellow-500 animate-spin pointer-events-none'
+    case 'COMPLETE': return 'i-ph-check-circle text-green-500'
+    case 'ERROR': return 'i-ph-x-circle text-red-500'
+    default: return 'i-ph-warning-circle'
+  }
+})
+
+// File selection
 const files: Ref<string[]> = ref([])
 async function handleSelectFiles() {
   const selected = await open({
     filters: [{ extensions: ['zrf'], name: 'ART.LAB' }],
     multiple: true,
   })
-  if (Array.isArray(selected))
+  if (Array.isArray(selected)) {
     files.value = selected
+    conversionStatus.value = 'READY'
+  }
 }
 
+// Save folder location
 const saveLocation: Ref<string> = ref(await downloadDir())
 async function handleSaveLocation() {
   const selected = await open({
@@ -21,6 +38,18 @@ async function handleSaveLocation() {
   })
   if (typeof selected === 'string')
     saveLocation.value = selected
+}
+
+// File conversion
+async function handleConvertSelectedFiles() {
+  conversionStatus.value = 'BUSY'
+  await invoke('convert', { files: files.value, saveLocation: saveLocation.value })
+    .then(() => {
+      conversionStatus.value = 'COMPLETE'
+    })
+    .catch((_) => {
+      conversionStatus.value = 'ERROR'
+    })
 }
 </script>
 
@@ -49,7 +78,8 @@ async function handleSaveLocation() {
             </li>
           </ul>
         </UiScrollArea>
-        <div v-else un-flex="~ col" un-flex-grow un-rounded-md un-bg-zinc-800 un-items-center un-justify-center un-text="sm neutral-400">
+        <div v-else un-flex="~ col gap-2" un-flex-grow un-rounded-md un-bg-zinc-800 un-items-center un-justify-center un-text="sm neutral-400">
+          <div class="i-ph-warning-circle" />
           <div>No files selected</div>
         </div>
       </div>
@@ -77,8 +107,9 @@ async function handleSaveLocation() {
           </div>
         </div>
         <div>
-          <UIButton un-w-full :disabled="files.length === 0">
-            Convert {{ files.length }} Selected File(s)
+          <UIButton un-w-full :disabled="files.length === 0" un-justify-between @click="handleConvertSelectedFiles">
+            <div>Convert {{ files.length }} Selected File(s)</div>
+            <div :class="convertButtonIcon" />
           </UIButton>
         </div>
       </div>

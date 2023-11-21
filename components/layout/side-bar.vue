@@ -1,11 +1,4 @@
 <script lang="ts" setup>
-import {
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuRoot,
-} from 'radix-vue'
-
 // Manually specify links to pages
 const sections = [
   {
@@ -37,9 +30,9 @@ const sections = [
           <NavigationMenuItem v-for="{ icon, label, to } in items" :key="to">
             <NavigationMenuLink
               un-bg="hover:zinc-700" un-border="1 solid transparent hover:[--text-colour]"
-              un-transition="colors" un-rounded-md un-px-2 un-py-1 un-w-full as-child
+              un-transition="colors" as-child un-rounded-md un-px-2 un-py-1 un-w-full
             >
-              <NuxtLink :to="to" un-items-center un-flex un-select-none un-gap-2>
+              <NuxtLink :to="to" un-flex un-select-none un-items-center un-gap-2>
                 <div :class="icon" />
                 {{ label }}
               </NuxtLink>

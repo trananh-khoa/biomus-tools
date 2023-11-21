@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewport } from 'radix-vue'
 </script>
 
 <template>
@@ -15,7 +14,7 @@ import { ScrollAreaRoot, ScrollAreaScrollbar, ScrollAreaThumb, ScrollAreaViewpor
       orientation="horizontal"
       un-bg="black/50"
       un-h="2.5"
-      un-select-none un-touch-none un-flex un-p-0.5
+      un-flex un-select-none un-touch-none un-p-0.5
     >
       <ScrollAreaThumb class="bg-rainbow" un-rounded-full />
     </ScrollAreaScrollbar>

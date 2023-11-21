@@ -3,6 +3,10 @@ import { open } from '@tauri-apps/api/dialog'
 import { Separator } from 'radix-vue'
 import { downloadDir } from '@tauri-apps/api/path'
 import { invoke } from '@tauri-apps/api/tauri'
+import { useToastStore } from '@/stores/toast'
+
+// Toasts
+const { description, open: toastOpen, timer, title } = storeToRefs(useToastStore())
 
 // Visual feedback
 const conversionStatus: Ref<string> = ref('WAITING')
@@ -44,11 +48,20 @@ async function handleSaveLocation() {
 async function handleConvertSelectedFiles() {
   conversionStatus.value = 'BUSY'
   await invoke('convert', { files: files.value, saveLocation: saveLocation.value })
+  // await invoke('convert', { files: files.value, saveLocation: 'hello' })
     .then(() => {
       conversionStatus.value = 'COMPLETE'
     })
-    .catch((_) => {
+    .catch((err) => {
       conversionStatus.value = 'ERROR'
+
+      toastOpen.value = false
+      title.value = 'Error occurred when converting selected files'
+      description.value = err
+      window.clearTimeout(timer.value)
+      timer.value = window.setTimeout(() => {
+        toastOpen.value = true
+      }, 100)
     })
 }
 </script>
@@ -71,7 +84,7 @@ async function handleConvertSelectedFiles() {
         <UiScrollArea v-if="files.length > 0" un-flex-grow un-rounded-md un-bg-zinc-800 un-pb-3>
           <ul un-text-neutral-400>
             <li v-for="f in files" :key="f">
-              <div un-pl-2 un-py-1 un-pr-4>
+              <div un-py-1 un-pl-2 un-pr-4>
                 {{ f }}
               </div>
               <Separator un-h-0.25 un-bg-zinc-700 />

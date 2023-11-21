@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     '@unocss/nuxt',
     'radix-vue/nuxt',
+    '@pinia/nuxt',
   ],
   ssr: false,
 })

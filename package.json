@@ -14,10 +14,12 @@
     "lint:rust": "bun format:rust && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
     "@tauri-apps/api": "^1.5.1",
     "@unocss/reset": "^0.57.4",
     "@vueuse/components": "^10.6.1",
     "@vueuse/core": "^10.6.1",
+    "pinia": "^2.1.7",
     "radix-vue": "^1.1.3"
   },
   "devDependencies": {

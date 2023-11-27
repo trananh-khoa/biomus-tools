@@ -7,11 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && bun simple-git-hooks",
+    "postinstall": "nuxt prepare && pnpm simple-git-hooks",
     "format:rust": "cargo fmt --manifest-path src-tauri/Cargo.toml",
     "lint:commit": "commitlint --edit",
     "lint:nuxt": "eslint --fix",
-    "lint:rust": "bun format:rust && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
+    "lint:rust": "pnpm format:rust && cargo clippy --manifest-path src-tauri/Cargo.toml --fix --allow-staged"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
@@ -43,8 +43,8 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "bun lint-staged && bun lint:rust",
-    "commit-msg": "bun lint:commit ${1}"
+    "pre-commit": "pnpm lint-staged && pnpm lint:rust",
+    "commit-msg": "pnpm lint:commit ${1}"
   },
   "lint-staged": {
     "*": "eslint --fix"

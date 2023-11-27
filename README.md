@@ -103,7 +103,7 @@ As of right now, releases are not automatically published on the repository. Fol
 
 This is an example of how to list things you need to use the software and how to install them.
 * Install [Rust and Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
-* Install [Bun](https://bun.sh/docs/installation)
+* Install [pnpm]](https://pnpm.io/installation)
 
 ### Installation
 
@@ -114,7 +114,7 @@ This is an example of how to list things you need to use the software and how to
 2. Install packages
    ```sh
    cd biomus-tools
-   bun install
+   pnpm install
    ```
 3. Run the app in development...
    ```sh

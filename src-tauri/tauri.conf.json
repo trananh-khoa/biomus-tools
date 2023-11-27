@@ -1,7 +1,7 @@
 {
   "build": {
-    "beforeBuildCommand": "bun generate",
-    "beforeDevCommand": "bun dev",
+    "beforeBuildCommand": "pnpm generate",
+    "beforeDevCommand": "pnpm dev",
     "devPath": "http://localhost:3000",
     "distDir": "../.output/public"
   },
